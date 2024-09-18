@@ -13,6 +13,11 @@ export const HomeScreen = () => {
           <Title text='Opciones del menu' safe />
           <AirplaneIcon />
           {/* <Text style={ {color: '#000000'}}>Hola</Text> */}
+          {
+            menuItems.map((item, index) => (
+              <Text key={index} style={{ color: colors.primary }}>{item.name}</Text>
+            ))
+          }
         </ScrollView>
       </View>
     </View>

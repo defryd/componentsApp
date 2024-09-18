@@ -11,6 +11,7 @@ export const HomeScreen = () => {
       <View style={globalStyles.globalMargin}>
         <ScrollView>
           <Title text='Opciones del menu' safe />
+          <AirplaneIcon />
           {/* <Text style={ {color: '#000000'}}>Hola</Text> */}
         </ScrollView>
       </View>

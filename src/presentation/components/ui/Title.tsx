@@ -1,5 +1,5 @@
 import { Text, View } from 'react-native'
-import { globalStyles } from '../../../screens/theme/theme';
+import { globalStyles } from '../../../config/theme/theme';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 interface Props{

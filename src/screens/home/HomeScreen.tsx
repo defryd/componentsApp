@@ -1,38 +1,56 @@
 import { Text, View } from "react-native"
 import { AirplaneIcon } from '../../icons/Icons';
-import { colors, globalStyles } from "../theme/theme";
+import { colors, globalStyles } from "../../config/theme/theme";
 import { ScrollView } from "react-native-gesture-handler";
 import { Title } from "../../presentation/components/ui/Title";
 import { MenuItem } from "../../presentation/components/ui/MenuItem";
-
 
 export const HomeScreen = () => {
   return (
     <View style={[globalStyles.mainContainer]}>
       <View style={globalStyles.globalMargin}>
         <ScrollView>
-          <Title text='Opciones del menu' safe />
-          {/* <Text style={ {color: '#000000'}}>Hola</Text> */}
-          {
-            animationMenuItems.map((item, index) => (
-              <MenuItem key={item.component} {...item}  isFirts={ index === 0 } isLast={ index === menuItems.length - 1}/>
-            ))
-          }
-          {
-            menuItems.map((item, index) => (
-              <MenuItem key={item.component} {...item}  isFirts={ index === 0 } isLast={ index === menuItems.length - 1}/>
-            ))
-          }
-          {
-            uiMenuItems.map((item, index) => (
-              <MenuItem key={item.component} {...item}  isFirts={ index === 0 } isLast={ index === menuItems.length - 1}/>
-            ))
-          }
+          <Title text="Opciones del menú" safe />
+
+          {/* animationMenuItems
+          menuItems
+          uiMenuItems */}
+
+          {animationMenuItems.map((item, index) => (
+            <MenuItem
+              key={item.component}
+              {...item}
+              isFirst={index === 0}
+              isLast={index === animationMenuItems.length - 1}
+            />
+          ))}
+
+          <View style={{marginTop: 30}} />
+          {uiMenuItems.map((item, index) => (
+            <MenuItem
+              key={item.component}
+              {...item}
+              isFirst={index === 0}
+              isLast={index === uiMenuItems.length - 1}
+            />
+          ))}
+
+          <View style={{marginTop: 30}} />
+          {menuItems.map((item, index) => (
+            <MenuItem
+              key={item.component}
+              {...item}
+              isFirst={index === 0}
+              isLast={index === menuItems.length - 1}
+            />
+          ))}
+
+          <View style={{marginTop: 30}} />
         </ScrollView>
       </View>
     </View>
-  )
-}
+  );
+};
 
 const animationMenuItems = [
   {
@@ -45,28 +63,9 @@ const animationMenuItems = [
     icon: 'albums-outline',
     component: 'Animation102Screen',
   },
-]
-
-const uiMenuItems = [
-  {
-    name: 'Switches',
-    icon: 'toggle-outline',
-    component: 'SwitchScreen',
-  },
-  {
-    name: 'Alerts',
-    icon: 'alert-circle-outline',
-    component: 'AlertScreen',
-  },
-  {
-    name: 'TextInputs',
-    icon: 'document-text-outline',
-    component: 'TextInputScreen',
-  },
-]
+];
 
 export const menuItems = [
-  // 02-menuItems
   {
     name: 'Pull to refresh',
     icon: 'refresh-outline',
@@ -98,4 +97,20 @@ export const menuItems = [
     component: 'ChangeThemeScreen',
   },
 ];
-
+const uiMenuItems = [
+  {
+    name: 'Switches',
+    icon: 'toggle-outline',
+    component: 'SwitchScreen',
+  },
+  {
+    name: 'Alerts',
+    icon: 'alert-circle-outline',
+    component: 'AlertScreen',
+  },
+  {
+    name: 'TextInputs',
+    icon: 'document-text-outline',
+    component: 'TextInputScreen',
+  },
+];

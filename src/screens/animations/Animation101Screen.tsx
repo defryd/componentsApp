@@ -1,6 +1,6 @@
 import React from 'react'
 import { Animated, Easing, Pressable, StyleSheet, Text, View } from 'react-native'
-import { colors } from '../theme/theme'
+import { colors } from '../../config/theme/theme'
 import { useAnimation } from '../../presentation/hooks/useAnimation';
 
 export const Animation101Screen = () => {

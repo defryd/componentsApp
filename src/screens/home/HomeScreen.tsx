@@ -3,6 +3,7 @@ import { AirplaneIcon } from '../../icons/Icons';
 import { colors, globalStyles } from "../theme/theme";
 import { ScrollView } from "react-native-gesture-handler";
 import { Title } from "../../presentation/components/ui/Title";
+import { MenuItem } from "../../presentation/components/ui/MenuItem";
 
 
 export const HomeScreen = () => {
@@ -11,11 +12,20 @@ export const HomeScreen = () => {
       <View style={globalStyles.globalMargin}>
         <ScrollView>
           <Title text='Opciones del menu' safe />
-          <AirplaneIcon />
           {/* <Text style={ {color: '#000000'}}>Hola</Text> */}
           {
+            animationMenuItems.map((item, index) => (
+              <MenuItem key={item.component} {...item}  isFirts={ index === 0 } isLast={ index === menuItems.length - 1}/>
+            ))
+          }
+          {
             menuItems.map((item, index) => (
-              <Text key={index} style={{ color: colors.primary }}>{item.name}</Text>
+              <MenuItem key={item.component} {...item}  isFirts={ index === 0 } isLast={ index === menuItems.length - 1}/>
+            ))
+          }
+          {
+            uiMenuItems.map((item, index) => (
+              <MenuItem key={item.component} {...item}  isFirts={ index === 0 } isLast={ index === menuItems.length - 1}/>
             ))
           }
         </ScrollView>
@@ -24,8 +34,7 @@ export const HomeScreen = () => {
   )
 }
 
-export const menuItems = [
-  // 01-animationMenuItems
+const animationMenuItems = [
   {
     name: 'Animation 101',
     icon: 'cube-outline',
@@ -36,8 +45,27 @@ export const menuItems = [
     icon: 'albums-outline',
     component: 'Animation102Screen',
   },
+]
 
+const uiMenuItems = [
+  {
+    name: 'Switches',
+    icon: 'toggle-outline',
+    component: 'SwitchScreen',
+  },
+  {
+    name: 'Alerts',
+    icon: 'alert-circle-outline',
+    component: 'AlertScreen',
+  },
+  {
+    name: 'TextInputs',
+    icon: 'document-text-outline',
+    component: 'TextInputScreen',
+  },
+]
 
+export const menuItems = [
   // 02-menuItems
   {
     name: 'Pull to refresh',
@@ -68,23 +96,6 @@ export const menuItems = [
     name: 'Themes',
     icon: 'flask-outline',
     component: 'ChangeThemeScreen',
-  },
-
-  // 03- uiMenuItems
-  {
-    name: 'Switches',
-    icon: 'toggle-outline',
-    component: 'SwitchScreen',
-  },
-  {
-    name: 'Alerts',
-    icon: 'alert-circle-outline',
-    component: 'AlertScreen',
-  },
-  {
-    name: 'TextInputs',
-    icon: 'document-text-outline',
-    component: 'TextInputScreen',
   },
 ];
 

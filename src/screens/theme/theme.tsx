@@ -6,6 +6,7 @@ export interface ThemeColors {
     background: string;
     cardBackground: string;
     buttonTextColor: string;
+    gray: string;
 }
 export const colors: ThemeColors = {
     primary: "#5856D6",
@@ -14,6 +15,7 @@ export const colors: ThemeColors = {
     background: "#F3F2F7",
     cardBackground: "white",
     buttonTextColor: "white",
+    gray:"gray",
 };
 
 export const globalStyles = StyleSheet.create({

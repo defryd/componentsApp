@@ -16,9 +16,9 @@ export const Title = ( {text, safe = false, white = false} : Props) => {
         <Text
             style={{
                 ...globalStyles.title,
-                marginTop: safe ? top : 0,
+                color: white ? 'white' : 'black',
                 marginBottom: 10,
-                color: white ? 'white' : 'black'
+                marginTop: safe ? top : 0,
             }}
         >{text}
         </Text>

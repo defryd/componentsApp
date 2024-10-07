@@ -54,6 +54,7 @@ export const globalStyles = StyleSheet.create({
         borderRadius: 10,
         padding: 10,
         alignItems: "center",
+        margin: 10,
     },
     btnPrimaryText: {
         color: colors.text,

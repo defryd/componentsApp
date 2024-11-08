@@ -10,18 +10,30 @@ export const ModalScreen = () => {
 
     return (
         <CustomView>
-            <Title text="Modal Screen"  safe/>
+            <Title text="Modal Screen" safe />
 
-            <Button 
-            text="Open Modal" 
-            onPress={() => setIsvisible(true)} 
+            <Button
+                text="Open Modal"
+                onPress={() => setIsvisible(true)}
             />
 
-            {/* <Modal>
-                <View>
-                    <Title text='Modal Content' safe/>
+            <Modal
+                visible={isvisible}
+                animationType='slide'
+            >
+                <View
+                style={{
+                    flex: 1,
+                    backgroundColor: 'rgba(0,0,0,0.1)',
+                }}
+                >
+                    <Title text='Modal Content' safe />
+                    <Button
+                        text="Close Modal"
+                        onPress={() => setIsvisible(false)}
+                    />
                 </View>
-            </Modal> */}
+            </Modal>
 
         </CustomView>
     )

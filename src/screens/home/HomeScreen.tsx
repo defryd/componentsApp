@@ -63,6 +63,11 @@ const animationMenuItems = [
     icon: 'albums-outline',
     component: 'Animation102Screen',
   },
+  {
+    name: 'Animation 103',
+    icon: 'logo-octocat',
+    component: 'Animation103Screen',
+  },
 ];
 
 export const menuItems = [

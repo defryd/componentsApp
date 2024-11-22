@@ -1,5 +1,5 @@
 import { Text, View } from "react-native"
-import { AirplaneIcon } from '../../icons/Icons';
+import { AirplaneIcon } from '../../presentation/icons/Icons';
 import { colors, globalStyles } from "../../config/theme/theme";
 import { ScrollView } from "react-native-gesture-handler";
 import { Title } from "../../presentation/components/ui/Title";

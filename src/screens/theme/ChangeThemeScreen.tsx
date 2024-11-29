@@ -24,7 +24,7 @@ export const ChangeThemeScreen = () => {
                 text='Dark'
                 onPress={() => setTheme('dark')}
             />
-            <Text>
+            <Text style={{ color: colors.text }}>
                 {
                     JSON.stringify(colors, null, 2)
                 }

@@ -26,12 +26,12 @@ export const lightColors: ThemeColors = {
 };
 
 export const darkColors: ThemeColors = {
-    primary: "#5856D6",
+    primary: "#04f825",
     text: "white",
 
     background: "#090909",
     cardBackground: "2d2d2d",
-    buttonTextColor: "white",
+    buttonTextColor: "black",
 };
 
 export const globalStyles = StyleSheet.create({

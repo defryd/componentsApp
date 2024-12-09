@@ -30,7 +30,7 @@ export const darkColors: ThemeColors = {
     text: "white",
 
     background: "#090909",
-    cardBackground: "2d2d2d",
+    cardBackground: "#2d2d2d",
     buttonTextColor: "black",
 };
 

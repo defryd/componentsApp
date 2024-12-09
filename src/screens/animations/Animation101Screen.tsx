@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Animated, Easing, Pressable, StyleSheet, Text, View } from 'react-native'
 import { colors } from '../../config/theme/theme'
 import { useAnimation } from '../../presentation/hooks/useAnimation';
+import { ThemeContext } from '../../presentation/context/ThemeContext';
 
 export const Animation101Screen = () => {
 
     const { animatedOpacity, animetedTop, fadeIn, fadeOut, startmovingTopPosition } = useAnimation();
+    const { colors } = useContext(ThemeContext);
 
     return (
         <View style={styles.container}>

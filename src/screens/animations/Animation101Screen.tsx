@@ -1,6 +1,5 @@
 import React, { useContext } from 'react'
 import { Animated, Easing, Pressable, StyleSheet, Text, View } from 'react-native'
-import { colors } from '../../config/theme/theme'
 import { useAnimation } from '../../presentation/hooks/useAnimation';
 import { ThemeContext } from '../../presentation/context/ThemeContext';
 
@@ -10,7 +9,7 @@ export const Animation101Screen = () => {
     const { colors } = useContext(ThemeContext);
 
     return (
-        <View style={styles.container}>
+        <View style={[styles.container,{backgroundColor: colors.background}]}>
             <Animated.View style={[
                 styles.purpleBox
                 , {
@@ -20,7 +19,8 @@ export const Animation101Screen = () => {
                         {
                             translateY: animetedTop
                         }
-                    ]
+                    ],
+                    backgroundColor: colors.primary
 
                 }
             ]}></Animated.View>
@@ -33,12 +33,12 @@ export const Animation101Screen = () => {
                         duration: 700,
                         easing: Easing.elastic(2),
                     })
-                    }} style={[styles.button]}>
-                    <Text style={styles.textButton}>FaseIn</Text>
+                    }} style={[styles.button,  {backgroundColor: colors.cardBackground}]}>
+                    <Text style={[styles.textButton, {color: colors.text}]}>FaseIn</Text>
                 </Pressable>
 
-                <Pressable onPress={ () => fadeOut({}) } style={[styles.button]}>
-                    <Text style={styles.textButton}>FaseOut</Text>
+                <Pressable onPress={ () => fadeOut({}) } style={[styles.button, {backgroundColor: colors.cardBackground}]}>
+                    <Text style={[styles.textButton, {color: colors.text}]}>FaseOut</Text>
                 </Pressable>
             </View>
         </View>
@@ -53,19 +53,19 @@ const styles = StyleSheet.create({
         width: '100%',
     },
     purpleBox: {
-        backgroundColor: colors.primary,
+        // backgroundColor: colors.primary,
         width: 150,
         height: 150,
     },
     button:{
-        backgroundColor: 'gray',
+        // backgroundColor: 'gray',
         padding: 10,
         borderRadius: 10,
         margin: 10
         
     },
     textButton: {
-        color: colors.buttonTextColor,
+        // color: colors.buttonTextColor,
         textAlign: 'center',
     }
 

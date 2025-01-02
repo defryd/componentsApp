@@ -3,10 +3,14 @@ import { CustomView } from '../../presentation/components/ui/CustomView'
 import { Title } from '../../presentation/components/ui/Title'
 import { Card } from '../../presentation/components/ui/Card'
 import { globalStyles } from '../../config/theme/theme'
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import { ScrollView } from 'react-native-gesture-handler'
+import { ThemeContext } from '../../presentation/context/ThemeContext'
+import { SubTitle } from '../../presentation/components/ui/SubTitle'
 
 export const TextInputScreen = () => {
+
+    const { colors } = useContext(ThemeContext);
 
     const [form, setForm] = useState({
         name: '',
@@ -16,12 +20,15 @@ export const TextInputScreen = () => {
 
     return (
         <KeyboardAvoidingView
-            behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
-            <ScrollView>
+            behavior={Platform.OS === 'ios' ? 'padding' : undefined}
+            style={{ flex: 1 }}
+            >
+            <ScrollView style={{ backgroundColor: colors.background }}>
                 <CustomView margin>
                     <Title text='Text Inputs' safe></Title>
                     <Card>
-                        <TextInput style={globalStyles.input}
+                        <SubTitle text={'Nombre'} backgroundColor={colors.cardBackground} />
+                        <TextInput style={[globalStyles.input, { color: colors.text, borderColor: colors.primary }]}
                             placeholder='Enter your name'
                             autoCapitalize='words'
                             autoCorrect={false}
@@ -30,39 +37,34 @@ export const TextInputScreen = () => {
                     </Card>
 
                     <Card>
-                        <TextInput style={globalStyles.input}
+                        <SubTitle text={'Email'} backgroundColor={colors.cardBackground} />
+                        <TextInput style={[globalStyles.input, { color: colors.text, borderColor: colors.primary }]}
                             placeholder='Enter your email'
                             autoCapitalize='none'
                             autoCorrect={false}
                             keyboardType='email-address'
-                            onChangeText={value => setForm({ ...form, name: value })}
+                            onChangeText={value => setForm({ ...form, email: value })}
                         />
                     </Card>
 
                     <Card>
-                        <TextInput style={globalStyles.input}
+                        <SubTitle text={'Phone'} backgroundColor={colors.cardBackground} />
+                        <TextInput style={[globalStyles.input, { color: colors.text, borderColor: colors.primary }]}
                             placeholder='Enter your phone'
                             keyboardType='phone-pad'
-                            onChangeText={value => setForm({ ...form, name: value })}
+                            onChangeText={value => setForm({ ...form, phone: value })}
                         />
                     </Card>
 
                     <View style={{ height: 10 }} />
                     <Card>
-                        <Text>{JSON.stringify(form, null, 2)}</Text>
-                        <Text>{JSON.stringify(form, null, 2)}</Text>
-                        <Text>{JSON.stringify(form, null, 2)}</Text>
-                        <Text>{JSON.stringify(form, null, 2)}</Text>
-                        <Text>{JSON.stringify(form, null, 2)}</Text>
-                        <Text>{JSON.stringify(form, null, 2)}</Text>
-                    </Card>
-
-                    <Card>
-                        <TextInput style={globalStyles.input}
-                            placeholder='Enter your phone'
-                            keyboardType='phone-pad'
-                            onChangeText={value => setForm({ ...form, name: value })}
-                        />
+                        <SubTitle text={'Datos'} backgroundColor={colors.cardBackground} />
+                        <Text style={{ color: colors.text }}>{JSON.stringify(form, null, 2)}</Text>
+                        {/* <Text style={{ color: colors.text }}>{JSON.stringify(form, null, 2)}</Text> */}
+                        {/* <Text style={{color: colors.text}}>{JSON.stringify(form, null, 2)}</Text>
+                        <Text style={{color: colors.text}}>{JSON.stringify(form, null, 2)}</Text>
+                        <Text style={{color: colors.text}}>{JSON.stringify(form, null, 2)}</Text>
+                        <Text style={{color: colors.text}}>{JSON.stringify(form, null, 2)}</Text> */}
                     </Card>
                 </CustomView>
 

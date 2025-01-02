@@ -2,12 +2,14 @@ import { Title } from '../../presentation/components/ui/Title'
 import { CustomView } from '../../presentation/components/ui/CustomView'
 import { RefreshControl, ScrollView } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { globalStyles } from '../../config/theme/theme';
+import { ThemeContext } from '../../presentation/context/ThemeContext';
 
 export const PullToRefreshScreen = () => {
 
     const {top} = useSafeAreaInsets();
+    const { colors } = useContext(ThemeContext);
 
     const [isRefreshing, setIsRefreshing] = useState(false);
 
@@ -29,7 +31,7 @@ export const PullToRefreshScreen = () => {
                 onRefresh={onRefresh}
             />
         }
-        style={[globalStyles.mainContainer, globalStyles.globalMargin]}
+        style={[globalStyles.mainContainer, globalStyles.globalMargin, {backgroundColor: colors.background}]}
         >
             {/* <CustomView margin> */}
                 <Title text='Pull To Refresh' safe />

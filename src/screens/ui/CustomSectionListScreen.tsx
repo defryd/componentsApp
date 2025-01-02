@@ -3,9 +3,10 @@ import { Card } from '../../presentation/components/ui/Card'
 import { CustomView } from '../../presentation/components/ui/CustomView'
 import { Title } from '../../presentation/components/ui/Title'
 import { SubTitle } from '../../presentation/components/ui/SubTitle';
-import { colors } from '../../config/theme/theme';
 import { Separator } from '../../presentation/components/ui/Separator';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { ThemeContext } from '../../presentation/context/ThemeContext';
+import { useContext } from 'react';
 
 interface Houses {
     title: string;
@@ -93,17 +94,18 @@ export const CustomSectionListScreen = () => {
 
     const { height } = useWindowDimensions();
     const { top } = useSafeAreaInsets();
+    const { colors } = useContext(ThemeContext);
 
     return (
         <CustomView>
-            <Title text="Lista de Personajes" safe/>
+            <Title text="Lista de Personajes" safe style={{ marginLeft: 10 }}/>
 
             <Card>
                 <SectionList
                     sections={houses}
                     keyExtractor={(item) => item}
                     renderSectionHeader={({ section }) => <SubTitle text={section.title} backgroundColor={colors.cardBackground}/>}
-                    renderItem={({ item }) => <Text style={{marginVertical: 2}}>{item}</Text>}
+                    renderItem={({ item }) => <Text style={{marginVertical: 2, color: colors.text}}>{item}</Text>}
                     stickySectionHeadersEnabled={true}
                     
                     showsHorizontalScrollIndicator={false}

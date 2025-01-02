@@ -24,7 +24,7 @@ export const ModalScreen = () => {
                 <View
                 style={{
                     flex: 1,
-                    backgroundColor: 'rgba(0,0,0,0.1)',
+                    backgroundColor: 'rgba(0, 0, 0, 0.69)',
                 }}
                 >
                     <Title text='Modal Content' safe />

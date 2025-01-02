@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { Card } from '../../presentation/components/ui/Card';
 import { CustomSwitch } from '../../presentation/components/ui/CustomSwitch';
 import { Separator } from '../../presentation/components/ui/Separator';
+import { Title } from '../../presentation/components/ui/Title';
 
 export const SwitchScreen = () => {
 
@@ -17,7 +18,8 @@ export const SwitchScreen = () => {
     });
 
     return (
-        <CustomView style={{ marginTop: 100 }}>
+        <CustomView>
+            <Title text="Toggles" safe style={{ marginLeft: 10 }}/>
             <Card>
                 <CustomSwitch
                     isOn={state.isActive}

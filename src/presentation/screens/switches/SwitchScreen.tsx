@@ -1,10 +1,10 @@
 import { Switch } from 'react-native';
-import { CustomView } from '../../presentation/components/ui/CustomView'
+import { CustomView } from '../../components/ui/CustomView'
 import { useState } from 'react';
-import { Card } from '../../presentation/components/ui/Card';
-import { CustomSwitch } from '../../presentation/components/ui/CustomSwitch';
-import { Separator } from '../../presentation/components/ui/Separator';
-import { Title } from '../../presentation/components/ui/Title';
+import { Card } from '../../components/ui/Card';
+import { CustomSwitch } from '../../components/ui/CustomSwitch';
+import { Separator } from '../../components/ui/Separator';
+import { Title } from '../../components/ui/Title';
 
 export const SwitchScreen = () => {
 

@@ -1,9 +1,9 @@
 import { Text, View } from 'react-native'
-import { Button } from '../../presentation/components/ui/Button'
-import { CustomView } from '../../presentation/components/ui/CustomView'
-import { Title } from '../../presentation/components/ui/Title'
+import { Button } from '../../components/ui/Button'
+import { CustomView } from '../../components/ui/CustomView'
+import { Title } from '../../components/ui/Title'
 import { useContext } from 'react'
-import { ThemeContext } from '../../presentation/context/ThemeContext'
+import { ThemeContext } from '../../context/ThemeContext'
 
 export const ChangeThemeScreen = () => {
 

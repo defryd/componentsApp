@@ -1,12 +1,12 @@
 import { Text, View } from "react-native"
-import { AirplaneIcon } from '../../presentation/icons/Icons';
-import { globalStyles } from "../../config/theme/theme";
+import { AirplaneIcon } from '../../icons/Icons';
+import { globalStyles } from "../../../config/theme/theme";
 import { ScrollView } from "react-native-gesture-handler";
-import { Title } from "../../presentation/components/ui/Title";
-import { MenuItem } from "../../presentation/components/ui/MenuItem";
+import { Title } from "../../components/ui/Title";
+import { MenuItem } from "../../components/ui/MenuItem";
 import { useContext } from "react";
-import { ThemeContext } from "../../presentation/context/ThemeContext";
-import { CustomView } from "../../presentation/components/ui/CustomView";
+import { ThemeContext } from "../../context/ThemeContext";
+import { CustomView } from "../../components/ui/CustomView";
 
 export const HomeScreen = () => {
 

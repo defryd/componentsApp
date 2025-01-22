@@ -1,9 +1,9 @@
 import {Alert, View } from 'react-native'
-import { CustomView } from '../../presentation/components/ui/CustomView'
-import { Title } from '../../presentation/components/ui/Title'
-import { globalStyles } from '../../config/theme/theme'
-import { Button } from '../../presentation/components/ui/Button'
-import { showPrompt } from '../../config/adapters/prompt.adapter'
+import { CustomView } from '../../components/ui/CustomView'
+import { Title } from '../../components/ui/Title'
+import { globalStyles } from '../../../config/theme/theme'
+import { Button } from '../../components/ui/Button'
+import { showPrompt } from '../../../config/adapters/prompt.adapter'
 
 export const AlertScreen = () => {
     

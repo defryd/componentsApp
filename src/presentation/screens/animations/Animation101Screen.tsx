@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { Animated, Easing, Pressable, StyleSheet, Text, View } from 'react-native'
-import { useAnimation } from '../../presentation/hooks/useAnimation';
-import { ThemeContext } from '../../presentation/context/ThemeContext';
+import { useAnimation } from '../../hooks/useAnimation';
+import { ThemeContext } from '../../context/ThemeContext';
 
 export const Animation101Screen = () => {
 

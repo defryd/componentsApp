@@ -1,8 +1,8 @@
 import { useContext, useRef } from 'react';
 import { Animated, StyleSheet, View } from 'react-native'
-import { useAnimation } from '../../presentation/hooks/useAnimation';
-import { colors } from '../../config/theme/theme';
-import { ThemeContext } from '../../presentation/context/ThemeContext';
+import { useAnimation } from '../../hooks/useAnimation';
+import { colors } from '../../../config/theme/theme';
+import { ThemeContext } from '../../context/ThemeContext';
 
 export const Animation102Screen = () => {
 

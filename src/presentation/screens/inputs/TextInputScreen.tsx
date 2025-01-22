@@ -1,12 +1,12 @@
 import { KeyboardAvoidingView, Platform, Text, TextInput, View } from 'react-native'
-import { CustomView } from '../../presentation/components/ui/CustomView'
-import { Title } from '../../presentation/components/ui/Title'
-import { Card } from '../../presentation/components/ui/Card'
-import { globalStyles } from '../../config/theme/theme'
+import { CustomView } from '../../components/ui/CustomView'
+import { Title } from '../../components/ui/Title'
+import { Card } from '../../components/ui/Card'
+import { globalStyles } from '../../../config/theme/theme'
 import { useContext, useState } from 'react'
 import { ScrollView } from 'react-native-gesture-handler'
-import { ThemeContext } from '../../presentation/context/ThemeContext'
-import { SubTitle } from '../../presentation/components/ui/SubTitle'
+import { ThemeContext } from '../../context/ThemeContext'
+import { SubTitle } from '../../components/ui/SubTitle'
 
 export const TextInputScreen = () => {
 

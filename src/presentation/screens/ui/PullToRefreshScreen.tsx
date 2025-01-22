@@ -1,10 +1,10 @@
-import { Title } from '../../presentation/components/ui/Title'
-import { CustomView } from '../../presentation/components/ui/CustomView'
+import { Title } from '../../components/ui/Title'
+import { CustomView } from '../../components/ui/CustomView'
 import { RefreshControl, ScrollView } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useContext, useState } from 'react';
-import { globalStyles } from '../../config/theme/theme';
-import { ThemeContext } from '../../presentation/context/ThemeContext';
+import { globalStyles } from '../../../config/theme/theme';
+import { ThemeContext } from '../../context/ThemeContext';
 
 export const PullToRefreshScreen = () => {
 

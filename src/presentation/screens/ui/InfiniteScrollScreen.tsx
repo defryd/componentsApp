@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { ActivityIndicator, FlatList, Image, Text, View } from 'react-native'
-import { CustomView } from '../../presentation/components/ui/CustomView';
-import { Title } from '../../presentation/components/ui/Title';
-import { colors } from '../../config/theme/theme';
-import { FadeInImage } from '../../presentation/components/ui/FadeInImage';
+import { CustomView } from '../../components/ui/CustomView';
+import { Title } from '../../components/ui/Title';
+import { colors } from '../../../config/theme/theme';
+import { FadeInImage } from '../../components/ui/FadeInImage';
 
 export const InfiniteScrollScreen = () => {
     

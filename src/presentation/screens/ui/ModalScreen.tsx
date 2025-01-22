@@ -1,8 +1,8 @@
 import { Modal, Text, View } from 'react-native'
-import { CustomView } from '../../presentation/components/ui/CustomView'
-import { Title } from '../../presentation/components/ui/Title'
+import { CustomView } from '../../components/ui/CustomView'
+import { Title } from '../../components/ui/Title'
 import { useState } from 'react'
-import { Button } from '../../presentation/components/ui/Button'
+import { Button } from '../../components/ui/Button'
 
 export const ModalScreen = () => {
 

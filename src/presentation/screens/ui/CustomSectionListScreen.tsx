@@ -1,11 +1,11 @@
 import { SectionList, Text, useWindowDimensions } from 'react-native'
-import { Card } from '../../presentation/components/ui/Card'
-import { CustomView } from '../../presentation/components/ui/CustomView'
-import { Title } from '../../presentation/components/ui/Title'
-import { SubTitle } from '../../presentation/components/ui/SubTitle';
-import { Separator } from '../../presentation/components/ui/Separator';
+import { Card } from '../../components/ui/Card'
+import { CustomView } from '../../components/ui/CustomView'
+import { Title } from '../../components/ui/Title'
+import { SubTitle } from '../../components/ui/SubTitle';
+import { Separator } from '../../components/ui/Separator';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { ThemeContext } from '../../presentation/context/ThemeContext';
+import { ThemeContext } from '../../context/ThemeContext';
 import { useContext } from 'react';
 
 interface Houses {

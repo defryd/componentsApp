@@ -1,10 +1,10 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
 import LottieView from 'lottie-react-native';
-import animationData from '../../presentation/assets/dino_404.json';
-import { CustomView } from '../../presentation/components/ui/CustomView';
-import { globalStyles } from '../../config/theme/theme';
-import { Title } from '../../presentation/components/ui/Title';
+import animationData from '../../assets/dino_404.json';
+import { CustomView } from '../../components/ui/CustomView';
+import { globalStyles } from '../../../config/theme/theme';
+import { Title } from '../../components/ui/Title';
 
 export default function Animation103Screen() {
     return (

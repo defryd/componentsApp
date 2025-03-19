@@ -36,7 +36,7 @@ export const useAnimation = () => {
         // () => animetedTop.resetAnimation()
     }
 
-    const startmovingTopPosition = ({
+    const startMovingTopPosition = ({
         initialPosition = 0,
         toValue = 0,
         duration = 300,
@@ -78,7 +78,7 @@ export const useAnimation = () => {
         //methods
         fadeIn,
         fadeOut,
-        startmovingTopPosition,
+        startMovingTopPosition,
         panResponder,
     }
 

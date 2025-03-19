@@ -4,8 +4,12 @@ import { Title } from '../../components/ui/Title'
 import { globalStyles } from '../../../config/theme/theme'
 import { Button } from '../../components/ui/Button'
 import { showPrompt } from '../../../config/adapters/prompt.adapter'
+import { useContext } from 'react'
+import { ThemeContext } from '../../context/ThemeContext'
 
 export const AlertScreen = () => {
+
+    const { isDark } = useContext(ThemeContext);
     
     const createTwoButtonAlert = () => {
         Alert.alert(
@@ -19,7 +23,9 @@ export const AlertScreen = () => {
                 },
                 { text: 'OK', onPress: () => console.log('OK Pressed') },
             ],
-            {},
+            {
+                userInterfaceStyle: isDark ? 'dark' : 'light'
+            },
         );
     };
 
@@ -44,23 +50,23 @@ export const AlertScreen = () => {
                 onDismiss() {
                     console.log('onDismiss');
                 },
+                userInterfaceStyle: isDark ? 'dark' : 'light'
             },
         );
 
-        const onShowPrompt = () => {
+    const onShowPrompt = () => {
 
-            showPrompt({
-                title: 'Correo electronico',
-                subTitle: 'Enim commodo ut amet esse aliqua.',
-                buttons: [
-                    { text: 'Ok', onPress: () => console.log('ok') }
-                ],
-                promptType: 'secure-text',
-                placeholder: 'Aqui va el texto',
-                defaulValue: 'Soy el valor por defecto'
-            })
+        showPrompt({
+            title: 'Lorem Ipsum',
+            subTitle: 'Nostrud qui duis officia dolor enim.',
+            buttons: [
+                { text: 'Ok', onPress: () => console.log('ok') }
+            ],
+            placeholder: 'Placeholder',
 
-            // showPrompt({
+        },);
+
+        // showPrompt({
             //   title: 'Lorem Ipsum',
             //   subTitle: 'Nostrud qui duis officia dolor enim.',
             //   buttons: [
@@ -68,7 +74,18 @@ export const AlertScreen = () => {
             //   ],
             //   placeholder: 'Placeholder'
             // });
-          };
+
+        // ! Código nativo
+        // Alert.prompt(
+        //   'Correo electronico',
+        //   'Enim commodo ut amet esse aliqua.',
+        //   (valor: string) => console.log({valor}),
+        //   'secure-text',
+        //   'Soy el valor por defecto',
+        //   'number-pad'
+        // );
+
+    };
 
     return (
         <CustomView style={globalStyles.globalMargin}>

@@ -12,13 +12,21 @@ import { InfiniteScrollScreen } from '../screens/ui/InfiniteScrollScreen';
 import Animation103Screen from '../screens/animations/Animation103Screen';
 import { SlidesScreen } from '../components/ui/SlidesScreen';
 import { ChangeThemeScreen } from '../screens/theme/ChangeThemeScreen';
+import { useContext } from 'react';
+import { ThemeContext } from '../context/ThemeContext';
 
 const Stack = createStackNavigator();
 
 export const Navigator = () => {
+
+    const { colors } = useContext(ThemeContext);
+    
     return (
         <Stack.Navigator screenOptions={{
             headerShown: false,
+            cardStyle: {
+                backgroundColor: colors.background
+            }
         }}>
             <Stack.Screen name="HomeScreen" component={HomeScreen} />
             <Stack.Screen name="Animation101Screen" component={Animation101Screen} />

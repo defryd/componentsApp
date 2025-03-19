@@ -1,19 +1,14 @@
-import { Text, View } from "react-native"
-import { AirplaneIcon } from '../../icons/Icons';
+import { View } from "react-native"
 import { globalStyles } from "../../../config/theme/theme";
 import { ScrollView } from "react-native-gesture-handler";
 import { Title } from "../../components/ui/Title";
 import { MenuItem } from "../../components/ui/MenuItem";
-import { useContext } from "react";
-import { ThemeContext } from "../../context/ThemeContext";
 import { CustomView } from "../../components/ui/CustomView";
 
 export const HomeScreen = () => {
 
-  const { colors } = useContext(ThemeContext);
-
   return (
-    <CustomView style={[globalStyles.mainContainer]}>
+    <CustomView style={[globalStyles.mainContainer]} margin>
       <ScrollView>
         <Title text="Opciones del menú" safe />
 

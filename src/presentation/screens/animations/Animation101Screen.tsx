@@ -2,10 +2,11 @@ import React, { useContext } from 'react'
 import { Animated, Easing, Pressable, StyleSheet, Text, View } from 'react-native'
 import { useAnimation } from '../../hooks/useAnimation';
 import { ThemeContext } from '../../context/ThemeContext';
+import { Button } from '../../components/ui/Button';
 
 export const Animation101Screen = () => {
 
-    const { animatedOpacity, animetedTop, fadeIn, fadeOut, startmovingTopPosition } = useAnimation();
+    const { animatedOpacity, animetedTop, fadeIn, fadeOut, startMovingTopPosition } = useAnimation();
     const { colors } = useContext(ThemeContext);
 
     return (
@@ -26,20 +27,24 @@ export const Animation101Screen = () => {
             ]}></Animated.View>
 
             <View style={{ flexDirection: 'row' }}>
-                <Pressable onPress={ () => {
-                    fadeIn({});
-                    startmovingTopPosition({
-                        initialPosition : -100,
-                        duration: 700,
-                        easing: Easing.elastic(2),
-                    })
-                    }} style={[styles.button,  {backgroundColor: colors.cardBackground}]}>
-                    <Text style={[styles.textButton, {color: colors.text}]}>FaseIn</Text>
-                </Pressable>
+                <Button
+                    text="FadeIn"
+                    onPress={() => {
+                        fadeIn({});
+                        startMovingTopPosition({
+                            initialPosition: -100,
+                            duration: 700,
+                            easing: Easing.elastic(2),
+                        })
 
-                <Pressable onPress={ () => fadeOut({}) } style={[styles.button, {backgroundColor: colors.cardBackground}]}>
-                    <Text style={[styles.textButton, {color: colors.text}]}>FaseOut</Text>
-                </Pressable>
+                    }}
+                    styles={{ marginTop: 10 }}
+                />
+                <Button
+                    text="FadeOut"
+                    onPress={() => fadeOut({})}
+                    styles={{ marginTop: 10 }}
+                />
             </View>
         </View>
     )

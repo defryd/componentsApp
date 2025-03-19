@@ -1,5 +1,4 @@
 import { Title } from '../../components/ui/Title'
-import { CustomView } from '../../components/ui/CustomView'
 import { RefreshControl, ScrollView } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useContext, useState } from 'react';
@@ -28,6 +27,8 @@ export const PullToRefreshScreen = () => {
                 refreshing={isRefreshing}
                 progressViewOffset={top}
                 colors={['#5856D6', '#FF9427', '#9B59B6']}
+                tintColor={colors.primary}
+                progressBackgroundColor={ colors.cardBackground }
                 onRefresh={onRefresh}
             />
         }

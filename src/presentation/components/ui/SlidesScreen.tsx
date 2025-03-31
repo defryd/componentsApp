@@ -7,28 +7,28 @@ import { useNavigation } from '@react-navigation/native';
 import { ThemeContext } from '../../context/ThemeContext';
 
 interface Slide {
-    title: string;
-    desc: string;
-    img: ImageSourcePropType;
-  }
-  
-  const items: Slide[] = [
-    {
-      title: 'Titulo 1',
-      desc: 'Ea et eu enim fugiat sunt reprehenderit sunt aute quis tempor ipsum cupidatat et.',
-      img: require('../../assets/slide-1.png'),
-    },
-    {
-      title: 'Titulo 2',
-      desc: 'Anim est quis elit proident magna quis cupidatat curlpa labore Lorem ea. Exercitation mollit velit in aliquip tempor occaecat dolor minim amet dolor enim cillum excepteur. ',
-      img: require('../../assets/slide-2.png'),
-    },
-    {
-      title: 'Titulo 3',
-      desc: 'Ex amet duis amet nulla. Aliquip ea Lorem ea culpa consequat proident. Nulla tempor esse ad tempor sit amet Lorem. Velit ea labore aute pariatur commodo duis veniam enim.',
-      img: require('../../assets/slide-3.png'),
-    },
-  ];
+  title: string;
+  desc: string;
+  img: ImageSourcePropType;
+}
+
+const items: Slide[] = [
+  {
+    title: 'Titulo 1',
+    desc: 'Ea et eu enim fugiat sunt reprehenderit sunt aute quis tempor ipsum cupidatat et.',
+    img: require('../../assets/slide-1.png'),
+  },
+  {
+    title: 'Titulo 2',
+    desc: 'Anim est quis elit proident magna quis cupidatat curlpa labore Lorem ea. Exercitation mollit velit in aliquip tempor occaecat dolor minim amet dolor enim cillum excepteur. ',
+    img: require('../../assets/slide-2.png'),
+  },
+  {
+    title: 'Titulo 3',
+    desc: 'Ex amet duis amet nulla. Aliquip ea Lorem ea culpa consequat proident. Nulla tempor esse ad tempor sit amet Lorem. Velit ea labore aute pariatur commodo duis veniam enim.',
+    img: require('../../assets/slide-3.png'),
+  },
+];
 
 export const SlidesScreen = () => {
 
@@ -45,7 +45,7 @@ export const SlidesScreen = () => {
   const { colors } = useContext(ThemeContext);
 
   const scrollToSlide = (index: number) => {
-    if( !flatListRef.current ) return;
+    if (!flatListRef.current) return;
 
     flatListRef.current.scrollToIndex({
       index,
@@ -64,7 +64,7 @@ export const SlidesScreen = () => {
         ref={flatListRef}
         data={items}
         keyExtractor={(item) => item.title}
-        renderItem={({ item }) => <SlideItem item = {item}/>}
+        renderItem={({ item }) => <SlideItem item={item} />}
         horizontal
         pagingEnabled
         // decelerationRate={'fast'}
@@ -98,7 +98,7 @@ interface SlideItemProps {
   item: Slide;
 }
 
-const SlideItem = ({ item } : SlideItemProps) => {
+const SlideItem = ({ item }: SlideItemProps) => {
 
   const { width } = useWindowDimensions();
   const { title, desc, img } = item;
@@ -113,9 +113,9 @@ const SlideItem = ({ item } : SlideItemProps) => {
       justifyContent: 'center',
       width: width,
     }}>
-      <Image source={img} style={{ width:  width * 0.7, height: width * 0.7, resizeMode: 'center', alignSelf: 'center' }} />
-      <Text style={[globalStyles.title, {color: colors.primary}]}>{title}</Text>
-      <Text style={{color: colors.text, marginTop: 20}}>{desc}</Text>
+      <Image source={img} style={{ width: width * 0.7, height: width * 0.7, resizeMode: 'center', alignSelf: 'center' }} />
+      <Text style={[globalStyles.title, { color: colors.primary }]}>{title}</Text>
+      <Text style={{ color: colors.text, marginTop: 20 }}>{desc}</Text>
     </View>
   )
 }

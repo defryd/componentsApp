@@ -1,5 +1,5 @@
 import { PropsWithChildren, useContext } from 'react';
-import { StyleProp, Text, View, ViewStyle } from 'react-native'
+import { StyleProp, View, ViewStyle } from 'react-native'
 import { ThemeContext } from '../../context/ThemeContext';
 
 interface Props extends PropsWithChildren{

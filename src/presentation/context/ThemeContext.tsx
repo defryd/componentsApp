@@ -43,7 +43,7 @@ export const ThemeProvider = ({ children }: PropsWithChildren) => {
     //     subscription.remove();
     //   };
     // }, []);
-    
+
     const setTheme = (theme: ThemeColor) => {
         setCurrentTheme(theme);
     };

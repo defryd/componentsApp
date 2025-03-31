@@ -4,7 +4,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { ThemeContext } from '../../context/ThemeContext';
 import { useContext } from 'react';
 
-interface Props{
+interface Props {
     text: string;
     safe?: boolean;
     backgroundColor?: string;

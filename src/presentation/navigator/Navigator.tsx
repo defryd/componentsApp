@@ -41,14 +41,6 @@ export const Navigator = () => {
             <Stack.Screen name="InfiniteScrollScreen" component={InfiniteScrollScreen} />
             <Stack.Screen name="SlidesScreen" component={SlidesScreen} />
             <Stack.Screen name="ChangeThemeScreen" component={ChangeThemeScreen} />
-
-            
-
-
-
-            
-
-            
         </Stack.Navigator>
     );
 }

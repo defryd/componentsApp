@@ -11,7 +11,7 @@ interface Props {
     white?: boolean;
 }
 
-export const Title = ({style, text, safe = false, white = false }: Props) => {
+export const Title = ({ style, text, safe = false, white = false }: Props) => {
 
     const { colors } = useContext(ThemeContext);
     const { top } = useSafeAreaInsets();
@@ -24,9 +24,9 @@ export const Title = ({style, text, safe = false, white = false }: Props) => {
                 marginBottom: 10,
                 marginTop: safe ? top : 0,
             },
-            style
-        ]
-        }
+                style
+            ]
+            }
         >{text}
         </Text>
     )

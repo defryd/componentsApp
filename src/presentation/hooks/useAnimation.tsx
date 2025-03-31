@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import { Animated, Easing, PanResponder, Text, View } from 'react-native'
+import { Animated, Easing, PanResponder } from 'react-native'
 
 export const useAnimation = () => {
     const animatedOpacity = useRef(new Animated.Value(0)).current;
@@ -52,7 +52,7 @@ export const useAnimation = () => {
                 easing: easing
             }).start(callback);
     }
-    
+
     const panResponder = PanResponder.create({
         onStartShouldSetPanResponder: () => true,
         onPanResponderMove: Animated.event([

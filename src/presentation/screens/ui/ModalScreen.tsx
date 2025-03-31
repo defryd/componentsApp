@@ -22,10 +22,10 @@ export const ModalScreen = () => {
                 animationType='slide'
             >
                 <View
-                style={{
-                    flex: 1,
-                    backgroundColor: 'rgba(0, 0, 0, 0.69)',
-                }}
+                    style={{
+                        flex: 1,
+                        backgroundColor: 'rgba(0, 0, 0, 0.69)',
+                    }}
                 >
                     <Title text='Modal Content' safe />
                     <Button

@@ -8,13 +8,13 @@ export const Animation102Screen = () => {
 
     const { colors } = useContext(ThemeContext);
 
-        const {pan, panResponder} = useAnimation();
-        
+    const { pan, panResponder } = useAnimation();
+
     return (
-        <CustomView style={[styles.container,{backgroundColor: colors.background}]}>
+        <CustomView style={[styles.container, { backgroundColor: colors.background }]}>
             <Animated.View
                 {...panResponder.panHandlers}
-                style={[pan.getLayout(), styles.box, {backgroundColor: colors.primary}]}
+                style={[pan.getLayout(), styles.box, { backgroundColor: colors.primary }]}
             />
         </CustomView>
     )

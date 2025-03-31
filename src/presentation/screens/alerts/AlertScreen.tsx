@@ -1,4 +1,4 @@
-import {Alert, View } from 'react-native'
+import { Alert, View } from 'react-native'
 import { CustomView } from '../../components/ui/CustomView'
 import { Title } from '../../components/ui/Title'
 import { globalStyles } from '../../../config/theme/theme'
@@ -10,7 +10,7 @@ import { ThemeContext } from '../../context/ThemeContext'
 export const AlertScreen = () => {
 
     const { isDark } = useContext(ThemeContext);
-    
+
     const createTwoButtonAlert = () => {
         Alert.alert(
             'Alert Title',
@@ -67,13 +67,13 @@ export const AlertScreen = () => {
         },);
 
         // showPrompt({
-            //   title: 'Lorem Ipsum',
-            //   subTitle: 'Nostrud qui duis officia dolor enim.',
-            //   buttons: [
-            //     { text: 'Ok', onPress: () => console.log('ok') }
-            //   ],
-            //   placeholder: 'Placeholder'
-            // });
+        //   title: 'Lorem Ipsum',
+        //   subTitle: 'Nostrud qui duis officia dolor enim.',
+        //   buttons: [
+        //     { text: 'Ok', onPress: () => console.log('ok') }
+        //   ],
+        //   placeholder: 'Placeholder'
+        // });
 
         // ! Código nativo
         // Alert.prompt(

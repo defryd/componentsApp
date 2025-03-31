@@ -7,7 +7,7 @@ import { ThemeContext } from '../../context/ThemeContext';
 
 export const PullToRefreshScreen = () => {
 
-    const {top} = useSafeAreaInsets();
+    const { top } = useSafeAreaInsets();
     const { colors } = useContext(ThemeContext);
 
     const [isRefreshing, setIsRefreshing] = useState(false);
@@ -19,23 +19,23 @@ export const PullToRefreshScreen = () => {
             setIsRefreshing(false);
         }, 3000);
     }
-    
+
     return (
         <ScrollView
-        refreshControl={
-            <RefreshControl
-                refreshing={isRefreshing}
-                progressViewOffset={top}
-                colors={['#5856D6', '#FF9427', '#9B59B6']}
-                tintColor={colors.primary}
-                progressBackgroundColor={ colors.cardBackground }
-                onRefresh={onRefresh}
-            />
-        }
-        style={[globalStyles.mainContainer, globalStyles.globalMargin, {backgroundColor: colors.background}]}
+            refreshControl={
+                <RefreshControl
+                    refreshing={isRefreshing}
+                    progressViewOffset={top}
+                    colors={['#5856D6', '#FF9427', '#9B59B6']}
+                    tintColor={colors.primary}
+                    progressBackgroundColor={colors.cardBackground}
+                    onRefresh={onRefresh}
+                />
+            }
+            style={[globalStyles.mainContainer, globalStyles.globalMargin, { backgroundColor: colors.background }]}
         >
             {/* <CustomView margin> */}
-                <Title text='Pull To Refresh' safe />
+            <Title text='Pull To Refresh' safe />
             {/* </CustomView> */}
         </ScrollView>
     )

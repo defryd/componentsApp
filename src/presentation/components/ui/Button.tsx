@@ -1,4 +1,4 @@
-import { Pressable, StyleProp, Text, View, ViewStyle } from 'react-native'
+import { Pressable, StyleProp, Text, ViewStyle } from 'react-native'
 import { globalStyles } from '../../../config/theme/theme';
 import { ThemeContext } from '../../context/ThemeContext';
 import { useContext } from 'react';
@@ -6,7 +6,6 @@ import { useContext } from 'react';
 interface Props {
     text: string;
     styles?: StyleProp<ViewStyle>;
-
     onPress: () => void;
 }
 

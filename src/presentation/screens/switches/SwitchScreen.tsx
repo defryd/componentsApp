@@ -1,4 +1,3 @@
-import { Switch } from 'react-native';
 import { CustomView } from '../../components/ui/CustomView'
 import { useState } from 'react';
 import { Card } from '../../components/ui/Card';
@@ -19,7 +18,7 @@ export const SwitchScreen = () => {
 
     return (
         <CustomView>
-            <Title text="Toggles" safe style={{ marginLeft: 10 }}/>
+            <Title text="Toggles" safe style={{ marginLeft: 10 }} />
             <Card>
                 <CustomSwitch
                     isOn={state.isActive}
@@ -27,7 +26,7 @@ export const SwitchScreen = () => {
                     onChange={(value) => setState({ ...state, isActive: value })}
                 />
 
-                <Separator/>
+                <Separator />
 
                 <CustomSwitch
                     isOn={state.isHungry}
@@ -35,8 +34,8 @@ export const SwitchScreen = () => {
                     onChange={(value) => setState({ ...state, isHungry: value })}
                 />
 
-                <Separator/>
-                
+                <Separator />
+
                 <CustomSwitch
                     isOn={state.isHappy}
                     text='¿Esta feliz?'

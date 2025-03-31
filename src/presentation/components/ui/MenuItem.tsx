@@ -45,14 +45,14 @@ export const MenuItem = ({
           <Icon
             name={icon}
             size={25}
-            style={{marginRight: 10}}
+            style={{ marginRight: 10 }}
             color={colors.primary}
           />
-          <Text style={{color: colors.text}}>{name}</Text>
+          <Text style={{ color: colors.text }}>{name}</Text>
           <Icon
             name="chevron-forward-outline"
             size={25}
-            style={{marginLeft: 'auto', color: colors.primary}}
+            style={{ marginLeft: 'auto', color: colors.primary }}
           />
         </View>
       </Pressable>

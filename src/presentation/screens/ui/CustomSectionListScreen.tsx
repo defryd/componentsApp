@@ -98,22 +98,21 @@ export const CustomSectionListScreen = () => {
 
     return (
         <CustomView>
-            <Title text="Lista de Personajes" safe style={{ marginLeft: 10 }}/>
+            <Title text="Lista de Personajes" safe style={{ marginLeft: 10 }} />
 
             <Card>
                 <SectionList
                     sections={houses}
                     keyExtractor={(item) => item}
-                    renderSectionHeader={({ section }) => <SubTitle text={section.title} backgroundColor={colors.cardBackground}/>}
-                    renderItem={({ item }) => <Text style={{marginVertical: 2, color: colors.text}}>{item}</Text>}
+                    renderSectionHeader={({ section }) => <SubTitle text={section.title} backgroundColor={colors.cardBackground} />}
+                    renderItem={({ item }) => <Text style={{ marginVertical: 2, color: colors.text }}>{item}</Text>}
                     stickySectionHeadersEnabled={true}
-                    
-                    showsHorizontalScrollIndicator={false}
-                    SectionSeparatorComponent={ Separator }
-                    ListHeaderComponent={ () => <Title text="Personajes" /> }
-                    ListFooterComponent={() => <Title text={`Secciones: ${houses.length}`} />}
 
-                    style = {{ height: height - top - 120 }}
+                    showsHorizontalScrollIndicator={false}
+                    SectionSeparatorComponent={Separator}
+                    ListHeaderComponent={() => <Title text="Personajes" />}
+                    ListFooterComponent={() => <Title text={`Secciones: ${houses.length}`} />}
+                    style={{ height: height - top - 120 }}
                 />
             </Card>
         </CustomView>
